@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "love-release"
-version = "2.0.2-0"
+version = "2.0.3-1"
 -- LuaDist source
 source = {
-  tag = "2.0.2-0",
+  tag = "2.0.3-1",
   url = "git://github.com/LuaDist-testing/love-release.git"
 }
 -- Original source
 -- source = {
---   url = "git://github.com/MisterDA/love-release.git",
---   tag = "v2.0.2",
+--   url = "git://github.com/MisterDA/love-release",
+--   tag = "v2.0.3",
 -- }
 description = {
   summary = "Make LÖVE games releases easier",
