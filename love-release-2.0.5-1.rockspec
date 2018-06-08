@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "love-release"
-version = "2.0.4-1"
+version = "2.0.5-1"
+-- LuaDist source
 source = {
-  url = "git://github.com/MisterDA/love-release",
-  tag = "v2.0.4",
+  tag = "2.0.5-1",
+  url = "git://github.com/LuaDist-testing/love-release.git"
 }
+-- Original source
+-- source = {
+--   url = "git://github.com/MisterDA/love-release",
+--   tag = "v2.0.5",
+-- }
 description = {
   summary = "Make LÖVE games releases easier",
   detailed = [[
