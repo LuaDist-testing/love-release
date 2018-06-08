@@ -2,10 +2,10 @@
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/MisterDA/love-release.svg?branch=master)](https://travis-ci.org/MisterDA/love-release)
 [![Coverage Status](https://coveralls.io/repos/github/MisterDA/love-release/badge.svg?branch=master)](https://coveralls.io/github/MisterDA/love-release?branch=master)
-[![LuaRocks](https://img.shields.io/badge/LuaRocks-2.0.5-blue.svg)](https://luarocks.org/modules/rucikir/love-release)
+[![LuaRocks](https://img.shields.io/badge/LuaRocks-2.0.6-blue.svg)](https://luarocks.org/modules/rucikir/love-release)
 ![Lua](https://img.shields.io/badge/Lua-5.1%2C%20JIT-blue.svg)
 
-[Lua][lua] 5.1 script that makes [LÖVE][love] game release easier (previously Bash script).  
+[Lua][lua] script that makes [LÖVE][love] game release easier (previously Bash script).  
 Automates LÖVE [Game Distribution][game_dist].  
 LÖVE [forum topic][forum_topic].  
 Available as a [LuaRocks][luarocks] [package][package].
@@ -85,21 +85,21 @@ end
 love-release is only installable through LuaRocks and highly depends on LuaRocks internal API. love-release is currently build on LuaRocks 2.3.0. LuaRocks API is not meant to be stable, and a future update could break love-release. As love-release is made for LÖVE, it is written for Lua 5.1.
 
 #### Required
-- [libzip][libzip] headers for lua-zip.
-- [lua-zip][lua-zip] has no official stable version, thus while available on LuaRocks it must be installed manually.
-- Other libraries are automatically installed, but let's give them some credit: [luafilesystem][lfs], [loadconf][loadconf], [middleclass][middleclass], [semver][semver].
+- [libzip][libzip] and its headers for lua-libzip.
+- Other libraries are automatically installed, but let's give them some credit: [lua-libzip][lua-libzip], [luafilesystem][lfs], [loadconf][loadconf], [middleclass][middleclass], [semver][semver].
 
 #### Optional
 - `love` can be used to determine your system LÖVE version.
 - `fakeroot` and `dpkg-deb` are required to create Debian packages.
 - [LuaJIT][luajit] can be used to compile your sources, either with `luarocks-luajit` or if `luajit` is installed.
 
+##### Lua binding to libzip
+
+love-release depends on a Lua binding to [libzip][libzip]. I have forked [brimworks/lua-zip][lua-zip] to integrate new features, and published the fork under the name of [lua-libzip][lua-libzip] in [LuaRocks][lua-libzip-rock]. The name will change when LuaRocks 3 will be released.
+
 ### Install
 
 ```sh
-# sudo
-luarocks install --server=http://luarocks.org/dev lua-zip
-
 # latest stable version
 luarocks install love-release
 
@@ -132,6 +132,8 @@ Every bug report or feature request is gladly welcome !
 [luajit]: http://luajit.org/
 [luarocks]: https://luarocks.org/
 [lua-zip]: https://github.com/brimworks/lua-zip
+[lua-libzip]: https://github.com/misterda/lua-zip
+[lua-libzip-rock]: https://luarocks.org/modules/rucikir/lua-libzip
 [loadconf]: https://github.com/Alloyed/loadconf
 [middleclass]: https://github.com/kikito/middleclass
 [package]: https://luarocks.org/modules/rucikir/love-release
